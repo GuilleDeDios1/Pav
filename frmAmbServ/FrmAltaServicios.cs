@@ -1,14 +1,7 @@
 ﻿using Proyecto_TPI.Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
+using Proyecto_TPI.Validador;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Proyecto_TPI
 {
@@ -22,10 +15,7 @@ namespace Proyecto_TPI
 
  
 
-        private bool controlarExistencia(Servicios servicio)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         private bool AgregarServcioABD(Servicios serv)
         {
@@ -62,26 +52,26 @@ namespace Proyecto_TPI
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             {
+                bool van = validador.validar(Controls);
+                if (!van) { return;}
                 Servicios serv = new Servicios();
-
                 serv.Nombre_servicio = txtNombre.Text;
                 serv.Descripcion_servivio = txtDescrip.Text;
                 serv.Costo_mensual_servicio = Int32.Parse(txtcosto.Text);
 
+                bool resultado = AgregarServcioABD(serv);
+                if (resultado)
+                {
+                    MessageBox.Show("Persona Agregada con exito....");
 
+                }
+                else
+                {
+                    MessageBox.Show("Error al agregar la persona...");
+                }
 
-                    bool resultado = AgregarServcioABD(serv);
-                    if (resultado)
-                    {
-                        MessageBox.Show("Persona Agregada con exito....");
+                this.Close();
 
-                    }
-                    else
-                    {
-                        MessageBox.Show("Error al agregar la persona...");
-                    }
-
-                    this.Close();
             }
         }
     }
