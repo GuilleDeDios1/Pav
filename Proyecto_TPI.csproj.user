@@ -7,13 +7,13 @@
     <Compile Update="frmAltaContrato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FrmAltaServicios.cs">
+    <Compile Update="frmAmbServ\FrmAltaServicios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmConsultaServicio.cs">
+    <Compile Update="frmAmbServ\frmConsultaServicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="frmEditarServicios.cs">
+    <Compile Update="frmAmbServ\frmEditarServicios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="frmMenuPrincipal.cs">

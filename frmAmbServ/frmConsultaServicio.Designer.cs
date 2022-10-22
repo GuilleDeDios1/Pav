@@ -36,19 +36,19 @@
             this.Costo_Mensual = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbldescr_serv = new System.Windows.Forms.Label();
             this.lblcost_mens = new System.Windows.Forms.Label();
-            this.txtdesc = new System.Windows.Forms.TextBox();
-            this.txtdesde = new System.Windows.Forms.TextBox();
-            this.txthasta = new System.Windows.Forms.TextBox();
             this.lbldesde = new System.Windows.Forms.Label();
             this.lblhasta = new System.Windows.Forms.Label();
             this.grbconsulserv = new System.Windows.Forms.GroupBox();
             this.checkActivo = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtnombre = new System.Windows.Forms.TextBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btm_limpiarDatos = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
+            this.txtnombre = new System.Windows.Forms.MaskedTextBox();
+            this.txtdesc = new System.Windows.Forms.MaskedTextBox();
+            this.txtdesde = new System.Windows.Forms.MaskedTextBox();
+            this.txthasta = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_servicios)).BeginInit();
             this.grbconsulserv.SuspendLayout();
             this.SuspendLayout();
@@ -110,27 +110,6 @@
             this.lblcost_mens.TabIndex = 3;
             this.lblcost_mens.Text = "Costo mensual";
             // 
-            // txtdesc
-            // 
-            this.txtdesc.Location = new System.Drawing.Point(77, 57);
-            this.txtdesc.Name = "txtdesc";
-            this.txtdesc.Size = new System.Drawing.Size(326, 23);
-            this.txtdesc.TabIndex = 5;
-            // 
-            // txtdesde
-            // 
-            this.txtdesde.Location = new System.Drawing.Point(105, 101);
-            this.txtdesde.Name = "txtdesde";
-            this.txtdesde.Size = new System.Drawing.Size(29, 23);
-            this.txtdesde.TabIndex = 6;
-            // 
-            // txthasta
-            // 
-            this.txthasta.Location = new System.Drawing.Point(154, 101);
-            this.txthasta.Name = "txthasta";
-            this.txthasta.Size = new System.Drawing.Size(32, 23);
-            this.txthasta.TabIndex = 7;
-            // 
             // lbldesde
             // 
             this.lbldesde.AutoSize = true;
@@ -151,16 +130,16 @@
             // 
             // grbconsulserv
             // 
+            this.grbconsulserv.Controls.Add(this.txthasta);
+            this.grbconsulserv.Controls.Add(this.txtdesde);
+            this.grbconsulserv.Controls.Add(this.txtdesc);
+            this.grbconsulserv.Controls.Add(this.txtnombre);
             this.grbconsulserv.Controls.Add(this.checkActivo);
             this.grbconsulserv.Controls.Add(this.label1);
-            this.grbconsulserv.Controls.Add(this.txtnombre);
             this.grbconsulserv.Controls.Add(this.lblhasta);
             this.grbconsulserv.Controls.Add(this.lbldescr_serv);
             this.grbconsulserv.Controls.Add(this.lbldesde);
             this.grbconsulserv.Controls.Add(this.lblcost_mens);
-            this.grbconsulserv.Controls.Add(this.txthasta);
-            this.grbconsulserv.Controls.Add(this.txtdesde);
-            this.grbconsulserv.Controls.Add(this.txtdesc);
             this.grbconsulserv.Location = new System.Drawing.Point(26, 178);
             this.grbconsulserv.Name = "grbconsulserv";
             this.grbconsulserv.Size = new System.Drawing.Size(409, 149);
@@ -188,13 +167,6 @@
             this.label1.Size = new System.Drawing.Size(54, 15);
             this.label1.TabIndex = 11;
             this.label1.Text = "Nombre:";
-            // 
-            // txtnombre
-            // 
-            this.txtnombre.Location = new System.Drawing.Point(77, 22);
-            this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 23);
-            this.txtnombre.TabIndex = 10;
             // 
             // btnActualizar
             // 
@@ -236,6 +208,34 @@
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
+            // txtnombre
+            // 
+            this.txtnombre.Location = new System.Drawing.Point(93, 26);
+            this.txtnombre.Name = "txtnombre";
+            this.txtnombre.Size = new System.Drawing.Size(100, 23);
+            this.txtnombre.TabIndex = 13;
+            // 
+            // txtdesc
+            // 
+            this.txtdesc.Location = new System.Drawing.Point(93, 55);
+            this.txtdesc.Name = "txtdesc";
+            this.txtdesc.Size = new System.Drawing.Size(280, 23);
+            this.txtdesc.TabIndex = 14;
+            // 
+            // txtdesde
+            // 
+            this.txtdesde.Location = new System.Drawing.Point(105, 101);
+            this.txtdesde.Name = "txtdesde";
+            this.txtdesde.Size = new System.Drawing.Size(29, 23);
+            this.txtdesde.TabIndex = 15;
+            // 
+            // txthasta
+            // 
+            this.txthasta.Location = new System.Drawing.Point(154, 101);
+            this.txthasta.Name = "txthasta";
+            this.txthasta.Size = new System.Drawing.Size(33, 23);
+            this.txthasta.TabIndex = 16;
+            // 
             // frmConsultaServicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -264,9 +264,6 @@
         private DataGridView dgv_servicios;
         private Label lbldescr_serv;
         private Label lblcost_mens;
-        private TextBox txtdesc;
-        private TextBox txtdesde;
-        private TextBox txthasta;
         private Label lbldesde;
         private Label lblhasta;
         private GroupBox grbconsulserv;
@@ -274,12 +271,15 @@
         private Button btm_limpiarDatos;
         private Button btnEditar;
         private Label label1;
-        private TextBox txtnombre;
         private DataGridViewTextBoxColumn Codigo_Servicio;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Descripcion;
         private DataGridViewTextBoxColumn Costo_Mensual;
         private Button btnBorrar;
         private CheckBox checkActivo;
+        private MaskedTextBox txthasta;
+        private MaskedTextBox txtdesde;
+        private MaskedTextBox txtdesc;
+        private MaskedTextBox txtnombre;
     }
 }
