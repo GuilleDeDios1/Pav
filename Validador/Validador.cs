@@ -34,6 +34,8 @@ namespace Proyecto_TPI.Validador
             }
             return van;
         }
+
+        public static void validar_existente() { }
         
     }
 }
