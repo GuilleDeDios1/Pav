@@ -40,6 +40,8 @@
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaTelefonoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.altaTelefonoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +52,8 @@
             this.usuariosToolStripMenuItem,
             this.personasToolStripMenuItem,
             this.reportesToolStripMenuItem,
-            this.ayudaToolStripMenuItem});
+            this.ayudaToolStripMenuItem,
+            this.altaTelefonoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(617, 24);
@@ -73,7 +76,7 @@
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.consultaToolStripMenuItem.Text = "Clientes";
             // 
             // nuevoToolStripMenuItem
@@ -93,7 +96,7 @@
             this.consultarToolStripMenuItem,
             this.darAltaToolStripMenuItem});
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
@@ -142,6 +145,20 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
+            // altaTelefonoToolStripMenuItem
+            // 
+            this.altaTelefonoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.altaTelefonoToolStripMenuItem1});
+            this.altaTelefonoToolStripMenuItem.Name = "altaTelefonoToolStripMenuItem";
+            this.altaTelefonoToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.altaTelefonoToolStripMenuItem.Text = "Telefonos";
+            // 
+            // altaTelefonoToolStripMenuItem1
+            // 
+            this.altaTelefonoToolStripMenuItem1.Name = "altaTelefonoToolStripMenuItem1";
+            this.altaTelefonoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaTelefonoToolStripMenuItem1.Text = "Alta Telefono";
+            // 
             // frmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -176,5 +193,7 @@
         private ToolStripMenuItem serviciosToolStripMenuItem;
         private ToolStripMenuItem consultarToolStripMenuItem;
         private ToolStripMenuItem darAltaToolStripMenuItem;
+        private ToolStripMenuItem altaTelefonoToolStripMenuItem;
+        private ToolStripMenuItem altaTelefonoToolStripMenuItem1;
     }
 }
