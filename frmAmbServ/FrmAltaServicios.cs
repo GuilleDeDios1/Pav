@@ -58,16 +58,23 @@ namespace Proyecto_TPI
                 serv.Nombre_servicio = txtNombre.Text;
                 serv.Descripcion_servivio = txtDescrip.Text;
                 serv.Costo_mensual_servicio = Int32.Parse(txtcosto.Text);
+                
+                bool van1 = validador.validar_existencia_servicio(serv.Nombre_servicio);
+                if (!van1) 
+                {
+                    MessageBox.Show("Ya existe un servicio con ese nombre");
+                    return; 
+                }
 
                 bool resultado = AgregarServcioABD(serv);
                 if (resultado)
                 {
-                    MessageBox.Show("Persona Agregada con exito....");
+                    MessageBox.Show("servicio Agregado con exito....");
 
                 }
                 else
                 {
-                    MessageBox.Show("Error al agregar la persona...");
+                    MessageBox.Show("Error al agregar la servicio...");
                 }
 
                 this.Close();
