@@ -9,25 +9,25 @@ using System.Threading.Tasks;
 namespace Proyecto_TPI.Validador
 {
     internal class validador
-    {   public validador(){}
+    { public validador() { }
 
         public static bool validar(Control.ControlCollection a)
-        {   bool van = true;
+        { bool van = true;
             if (a is null)
             {
                 throw new ArgumentNullException(nameof(a));
             }
             foreach (Control item in a) {
                 if (item is GroupBox) {
-                    foreach (Control item1 in item.Controls) 
+                    foreach (Control item1 in item.Controls)
                     {
                         if (item1.Text.Trim().Equals(""))
                         {
                             van = false;
                         }
                     }
-                    
-                    
+
+
                 }
             }
             if (!van)
@@ -60,7 +60,7 @@ namespace Proyecto_TPI.Validador
                     van = false;
                 }
                 return van;
-                
+
             }
             catch (Exception)
             {
@@ -112,7 +112,7 @@ namespace Proyecto_TPI.Validador
                 SqlCommand cmd = new SqlCommand();
                 string consulta = "SELECT * FROM Telefonos WHERE nro_telefono = @telefono";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@telefono",(int) telefono);
+                cmd.Parameters.AddWithValue("@telefono", (int)telefono);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
                 cn.Open();
@@ -135,7 +135,7 @@ namespace Proyecto_TPI.Validador
             }
         }
 
-        internal static bool validar_numero_servicio(int v,int h)
+        internal static bool validar_numero_servicio(int v, int h)
         {
             bool vandera = false;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
@@ -172,7 +172,39 @@ namespace Proyecto_TPI.Validador
                 throw;
             }
         }
-    }
+
+        internal static int buscar_numfactura()
+        { 
+          bool vandera = false;
+          string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+          SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "Select IDENT_CURRENT('Facturas') as 'factura'";
+                cmd.Parameters.Clear();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                if (tabla.Rows.Count > 0) { return Int32.Parse(tabla.Rows[0]["factura"].ToString()); }
+                else { return 0; }
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        } 
+    } 
 }
+    
+
 
 

@@ -37,20 +37,28 @@
             this.grbAsignarContrat = new System.Windows.Forms.GroupBox();
             this.dtpic = new System.Windows.Forms.DateTimePicker();
             this.txtnrotellcont = new System.Windows.Forms.TextBox();
+            this.btnasignarcontrato = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboServ = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnasignarcontrato = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.id_ser = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calle_cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nro_calle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvAsignar = new System.Windows.Forms.DataGridView();
+            this.nroTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cod_servi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaHasta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costo_mensual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.grbSelectTelefono.SuspendLayout();
             this.grbAsignarContrat.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignar)).BeginInit();
             this.SuspendLayout();
             // 
             // grbSelectTelefono
@@ -60,7 +68,7 @@
             this.grbSelectTelefono.Controls.Add(this.txtNumTelefono);
             this.grbSelectTelefono.Controls.Add(this.label2);
             this.grbSelectTelefono.Controls.Add(this.label1);
-            this.grbSelectTelefono.Location = new System.Drawing.Point(12, 12);
+            this.grbSelectTelefono.Location = new System.Drawing.Point(31, 60);
             this.grbSelectTelefono.Name = "grbSelectTelefono";
             this.grbSelectTelefono.Size = new System.Drawing.Size(256, 136);
             this.grbSelectTelefono.TabIndex = 0;
@@ -112,6 +120,7 @@
             // 
             // grbAsignarContrat
             // 
+            this.grbAsignarContrat.Controls.Add(this.btnBorrar);
             this.grbAsignarContrat.Controls.Add(this.dtpic);
             this.grbAsignarContrat.Controls.Add(this.txtnrotellcont);
             this.grbAsignarContrat.Controls.Add(this.btnasignarcontrato);
@@ -119,7 +128,7 @@
             this.grbAsignarContrat.Controls.Add(this.label4);
             this.grbAsignarContrat.Controls.Add(this.cboServ);
             this.grbAsignarContrat.Controls.Add(this.label3);
-            this.grbAsignarContrat.Location = new System.Drawing.Point(12, 154);
+            this.grbAsignarContrat.Location = new System.Drawing.Point(22, 311);
             this.grbAsignarContrat.Name = "grbAsignarContrat";
             this.grbAsignarContrat.Size = new System.Drawing.Size(256, 179);
             this.grbAsignarContrat.TabIndex = 1;
@@ -139,6 +148,16 @@
             this.txtnrotellcont.Name = "txtnrotellcont";
             this.txtnrotellcont.Size = new System.Drawing.Size(121, 23);
             this.txtnrotellcont.TabIndex = 7;
+            // 
+            // btnasignarcontrato
+            // 
+            this.btnasignarcontrato.Location = new System.Drawing.Point(147, 147);
+            this.btnasignarcontrato.Name = "btnasignarcontrato";
+            this.btnasignarcontrato.Size = new System.Drawing.Size(75, 23);
+            this.btnasignarcontrato.TabIndex = 6;
+            this.btnasignarcontrato.Text = "Asignar";
+            this.btnasignarcontrato.UseVisualStyleBackColor = true;
+            this.btnasignarcontrato.Click += new System.EventHandler(this.btnasignarcontrato_Click);
             // 
             // label5
             // 
@@ -175,16 +194,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Servicios";
             // 
-            // btnasignarcontrato
-            // 
-            this.btnasignarcontrato.Location = new System.Drawing.Point(147, 147);
-            this.btnasignarcontrato.Name = "btnasignarcontrato";
-            this.btnasignarcontrato.Size = new System.Drawing.Size(75, 23);
-            this.btnasignarcontrato.TabIndex = 6;
-            this.btnasignarcontrato.Text = "Asignar";
-            this.btnasignarcontrato.UseVisualStyleBackColor = true;
-            this.btnasignarcontrato.Click += new System.EventHandler(this.btnasignarcontrato_Click);
-            // 
             // dgvClientes
             // 
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -197,7 +206,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowTemplate.Height = 25;
             this.dgvClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvClientes.Size = new System.Drawing.Size(445, 311);
+            this.dgvClientes.Size = new System.Drawing.Size(445, 223);
             this.dgvClientes.TabIndex = 2;
             this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
@@ -225,11 +234,67 @@
             this.nro_calle.HeaderText = "Nro Calle";
             this.nro_calle.Name = "nro_calle";
             // 
+            // dgvAsignar
+            // 
+            this.dgvAsignar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAsignar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nroTelefono,
+            this.cod_servi,
+            this.fechaHasta,
+            this.costo_mensual});
+            this.dgvAsignar.Location = new System.Drawing.Point(346, 279);
+            this.dgvAsignar.Name = "dgvAsignar";
+            this.dgvAsignar.RowTemplate.Height = 25;
+            this.dgvAsignar.Size = new System.Drawing.Size(445, 265);
+            this.dgvAsignar.TabIndex = 3;
+            // 
+            // nroTelefono
+            // 
+            this.nroTelefono.HeaderText = "Telefono";
+            this.nroTelefono.Name = "nroTelefono";
+            // 
+            // cod_servi
+            // 
+            this.cod_servi.HeaderText = "nro_servicio";
+            this.cod_servi.Name = "cod_servi";
+            // 
+            // fechaHasta
+            // 
+            this.fechaHasta.HeaderText = "fechaHasta";
+            this.fechaHasta.Name = "fechaHasta";
+            // 
+            // costo_mensual
+            // 
+            this.costo_mensual.HeaderText = "Costo Mensual";
+            this.costo_mensual.Name = "costo_mensual";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(257, 516);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 4;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(24, 147);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 10;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // frmAltaContrato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(807, 345);
+            this.ClientSize = new System.Drawing.Size(1093, 556);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvAsignar);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.grbAsignarContrat);
             this.Controls.Add(this.grbSelectTelefono);
@@ -241,6 +306,7 @@
             this.grbAsignarContrat.ResumeLayout(false);
             this.grbAsignarContrat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAsignar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -267,5 +333,12 @@
         private DataGridViewTextBoxColumn calle_cliente;
         private DataGridViewTextBoxColumn nro_calle;
         private DateTimePicker dtpic;
+        private DataGridView dgvAsignar;
+        private DataGridViewTextBoxColumn nroTelefono;
+        private DataGridViewTextBoxColumn cod_servi;
+        private DataGridViewTextBoxColumn fechaHasta;
+        private DataGridViewTextBoxColumn costo_mensual;
+        private Button btnGuardar;
+        private Button btnBorrar;
     }
 }
