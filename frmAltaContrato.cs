@@ -64,13 +64,20 @@ namespace Proyecto_TPI
 
         private void btnAsignar_Click(object sender, EventArgs e)
         {
+            
+
+        }
+
+        //boton asignar contrato
+        private void btnasignarcontrato_Click(object sender, EventArgs e)
+        {
             if (txtNumTelefono.Text.Trim() == "")
             {
                 MessageBox.Show("Se debe ingresar telefono");
                 return;
             }
-            bool van = validador.validar_existencia_telefono(Int32.Parse(txtNumTelefono.Text));
-            if (!van)
+            bool van1 = validador.validar_existencia_telefono(Convert.ToUInt32(txtNumTelefono.Text));
+            if (!van1)
             {
                 MessageBox.Show("El numero de telefono ya existe");
                 return;
@@ -81,17 +88,17 @@ namespace Proyecto_TPI
             try
             {
                 SqlCommand cmd = new SqlCommand();
-                string consulta = "INSERT INTO [dbo].[Telefonos]"
+                string consulta1 = "INSERT INTO [dbo].[Telefonos]"
                                     + "([nro_telefono]"
                                     + ",[nro_cliente])"
                                     + "VALUES"
                                     + "(@numtell"
                                     + ",@numcliente)";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@numtell", Int32.Parse(txtNumTelefono.Text));
+                cmd.Parameters.AddWithValue("@numtell", long.Parse(txtNumTelefono.Text));
                 cmd.Parameters.AddWithValue("@numcliente", Int32.Parse(dgvClientes.CurrentRow.Cells[0].Value.ToString()));
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta;
+                cmd.CommandText = consulta1;
                 cn.Open();
                 cmd.Connection = cn;
                 cmd.ExecuteNonQuery();
@@ -105,16 +112,16 @@ namespace Proyecto_TPI
                 throw;
             }
 
-        }
 
-        //boton asignar contrato
-        private void btnasignarcontrato_Click(object sender, EventArgs e)
-        {
+
+
+
+
             if (txtnrotellcont.Text.Trim() == "" || cboServ.Text.Trim() == "") {
                 MessageBox.Show("Se debe ingresar todos los datos requeridos");
                 return;
             }
-            bool van = validador.validar_existencia_telefono(Int32.Parse(txtnrotellcont.Text));
+            bool van = validador.validar_existencia_telefono(Convert.ToUInt32(txtnrotellcont.Text));
             if (van)
             {
                 MessageBox.Show("El telefono no existe");
@@ -142,8 +149,7 @@ namespace Proyecto_TPI
                 MessageBox.Show("Este numero tiene vigente un servicio de este tipo");
                 return;
             }
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
+
             try
             {
                 SqlCommand cmd = new SqlCommand();

@@ -102,7 +102,7 @@ namespace Proyecto_TPI.Validador
             }
         }
 
-        internal static bool validar_existencia_telefono(int telefono)
+        internal static bool validar_existencia_telefono(uint telefono)
         {
             bool van = true;
             string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
@@ -112,7 +112,7 @@ namespace Proyecto_TPI.Validador
                 SqlCommand cmd = new SqlCommand();
                 string consulta = "SELECT * FROM Telefonos WHERE nro_telefono = @telefono";
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@telefono",telefono);
+                cmd.Parameters.AddWithValue("@telefono",(int) telefono);
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
                 cn.Open();
