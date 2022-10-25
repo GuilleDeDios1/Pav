@@ -47,7 +47,13 @@ namespace Proyecto_TPI
             ventana.Show();
         }
 
-        private void darAltaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void altaTelefonoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmAltaContrato ventana = new frmAltaContrato();
+            ventana.Show();
+        }
+
+        private void darAltaToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FrmAltaServicios ventana = new FrmAltaServicios();
             ventana.Show();

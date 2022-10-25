@@ -76,7 +76,7 @@
             this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.nuevoToolStripMenuItem});
             this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consultaToolStripMenuItem.Text = "Clientes";
             // 
             // nuevoToolStripMenuItem
@@ -96,7 +96,7 @@
             this.consultarToolStripMenuItem,
             this.darAltaToolStripMenuItem});
             this.serviciosToolStripMenuItem.Name = "serviciosToolStripMenuItem";
-            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.serviciosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.serviciosToolStripMenuItem.Text = "Servicios";
             this.serviciosToolStripMenuItem.Click += new System.EventHandler(this.serviciosToolStripMenuItem_Click);
             // 
@@ -116,7 +116,7 @@
             this.darAltaToolStripMenuItem.Name = "darAltaToolStripMenuItem";
             this.darAltaToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
             this.darAltaToolStripMenuItem.Text = "Dar alta de nuevo servicio";
-            this.darAltaToolStripMenuItem.Click += new System.EventHandler(this.darAltaToolStripMenuItem_Click);
+            this.darAltaToolStripMenuItem.Click += new System.EventHandler(this.darAltaToolStripMenuItem_Click_1);
             // 
             // personasToolStripMenuItem
             // 
@@ -156,8 +156,9 @@
             // altaTelefonoToolStripMenuItem1
             // 
             this.altaTelefonoToolStripMenuItem1.Name = "altaTelefonoToolStripMenuItem1";
-            this.altaTelefonoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.altaTelefonoToolStripMenuItem1.Size = new System.Drawing.Size(143, 22);
             this.altaTelefonoToolStripMenuItem1.Text = "Alta Telefono";
+            this.altaTelefonoToolStripMenuItem1.Click += new System.EventHandler(this.altaTelefonoToolStripMenuItem1_Click);
             // 
             // frmMenuPrincipal
             // 

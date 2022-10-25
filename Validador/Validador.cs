@@ -68,6 +68,110 @@ namespace Proyecto_TPI.Validador
                 throw;
             }
         }
+
+        internal static bool validar_existencia_telefono_usuario(int numusuario)
+        {
+            bool van = true;
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "SELECT * FROM Telefonos WHERE nro_cliente = @numusuario";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@numusuario", numusuario);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                if (tabla.Rows.Count != 0)
+                {
+                    van = false;
+                }
+                return van;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        internal static bool validar_existencia_telefono(int telefono)
+        {
+            bool van = true;
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "SELECT * FROM Telefonos WHERE nro_telefono = @telefono";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@telefono",telefono);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+                DataTable tabla = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                if (tabla.Rows.Count != 0)
+                {
+                    van = false;
+                }
+                return van;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        internal static bool validar_numero_servicio(int v,int h)
+        {
+            bool vandera = false;
+            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
+            SqlConnection cn = new SqlConnection(cadenaConexion);
+            try
+            {
+                SqlCommand cmd = new SqlCommand();
+                string consulta = "SELECT * FROM Servicios_Contratados WHERE nro_telefono = @numero AND fecha_hasta > @fecha  AND id_servicio = @nom_servicio";
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@numero", v);
+                cmd.Parameters.AddWithValue("@fecha", DateTime.Now);
+                cmd.Parameters.AddWithValue("@nom_servicio", h);
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = consulta;
+
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.ExecuteNonQuery();
+
+                DataTable tabla = new DataTable();
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(tabla);
+                if (tabla.Rows.Count != 0)
+                {
+                    vandera = true;
+                }
+                return vandera;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }
 
