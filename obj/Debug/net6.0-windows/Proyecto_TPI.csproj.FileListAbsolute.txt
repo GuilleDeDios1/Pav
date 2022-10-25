@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\juanc\PAV1\Proyecto_TPI\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.AssemblyReference.cache
 C:\Users\juanc\PAV1\Proyecto_TPI\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.GenerateResource.cache
 C:\Users\juanc\PAV1\Proyecto_TPI\obj\Debug\net6.0-windows\Proyecto_TPI.GeneratedMSBuildEditorConfig.editorconfig
@@ -120,3 +121,39 @@ C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\refint\Proyecto_TPI.dll
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.pdb
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.genruntimeconfig.cache
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\ref\Proyecto_TPI.dll
+=======
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.AssemblyReference.cache
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.Resources.baja_modificacion.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.Properties.consultaCliente.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.frmAltaContrato.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.FrmAltaServicios.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.frmConsultaServicio.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.frmEditarServicios.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.frmMenuPrincipal.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.LoginForm.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.Properties.Resource1.resources
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.GenerateResource.cache
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.AssemblyInfoInputs.cache
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.AssemblyInfo.cs
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.CoreCompileInputs.cache
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.exe
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.dll.config
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.deps.json
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.runtimeconfig.json
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\Proyecto_TPI.pdb
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\patricio\Desktop\pav\Pav\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.csproj.CopyComplete
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.dll
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\refint\Proyecto_TPI.dll
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.pdb
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.genruntimeconfig.cache
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\ref\Proyecto_TPI.dll
+C:\Users\patricio\Desktop\pav\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.AltaCliente.resources
+>>>>>>> abmCliente

@@ -460,11 +460,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj",
+      "projectUniqueName": "C:\\Users\\guill\\Desktop\\git2\\Pav\\Proyecto_TPI.csproj",
       "projectName": "Proyecto_TPI",
-      "projectPath": "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj",
+      "projectPath": "C:\\Users\\guill\\Desktop\\git2\\Pav\\Proyecto_TPI.csproj",
       "packagesPath": "C:\\Users\\guill\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\guill\\Desktop\\Pav\\obj\\",
+      "outputPath": "C:\\Users\\guill\\Desktop\\git2\\Pav\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\ArchivoDePrograma\\vusual3\\NuGetPackages"

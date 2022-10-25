@@ -14,7 +14,7 @@ namespace Proyecto_TPI
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(0);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -114,9 +114,9 @@ namespace Proyecto_TPI
             
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Environment.Exit(0);
         }
     }
 }
