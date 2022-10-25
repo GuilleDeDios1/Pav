@@ -12,12 +12,12 @@ namespace Proyecto_TPI.Entidades
         private string Nombre;
         private string NroCalle;
         private string Calle;
-        private int Barrio;
-        private int Localidad;
+        private string Barrio;
+        private string Localidad;
 
         public Cliente() { }
 
-        public Cliente(string nroCliente, string nombre, string nroCalle, string calle, int barrio, int localidad)
+        public Cliente(string nroCliente, string nombre, string nroCalle, string calle, string barrio, string localidad, bool activo)
         {
             NroCLiente = nroCliente;
             Nombre = nombre;
@@ -25,6 +25,7 @@ namespace Proyecto_TPI.Entidades
             Calle = calle;
             Barrio = barrio;
             Localidad = localidad;
+            Activo = activo;
         }
         public Cliente(string nroCliente, string nombre)
         {
@@ -57,17 +58,20 @@ namespace Proyecto_TPI.Entidades
             get => Calle;
             set => Calle = value;
         }
-        public int barrio
+        public string barrio
         {
             get => Barrio;
             set => Barrio = value;
         }
 
-        public int localidad
+        public string localidad
         {
             get => Localidad;
             set => Localidad = value;
         }
+
+        public bool Activo { get; set; }
+
 
     }
 }
