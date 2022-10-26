@@ -196,10 +196,6 @@ namespace Proyecto_TPI
                 throw;
             }
         }
-        private void nadaquever(int numtell, int id_servicio)
-        {
-            
-        }
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
@@ -241,6 +237,7 @@ namespace Proyecto_TPI
                 int numerofactura = validador.buscar_numfactura();
                 foreach (DataGridViewRow item in dgvAsignar.Rows)
                 {
+                    if(item.Cells[1].Value == null){ break; }
                     string consultaserviciosxcliente = "INSERT INTO[dbo].[Servicios_Contratados]"
                                                        + "([nro_telefono]"
                                                      + ",[fecha_desde]"
@@ -260,7 +257,6 @@ namespace Proyecto_TPI
 
                     cmd.CommandText = consultaserviciosxcliente;
                     cmd.ExecuteNonQuery();
-                    objTransaction = cn.BeginTransaction("serviciosXcontrato");
 
                     string consultaDetalleFactura = "INSERT INTO[dbo].[Detalle_factura_servicios]"
                                                                 + "([nrofactura]"
@@ -275,12 +271,10 @@ namespace Proyecto_TPI
 
                     cmd.CommandText = consultaDetalleFactura;
                     cmd.ExecuteNonQuery();
-                    objTransaction.Commit();
+                    
                 }
-
-
-
-                MessageBox.Show("Se genero la la factura conn sus detalles");
+                objTransaction.Commit();
+                MessageBox.Show("Se genero la la factura con sus detalles");
 
             }
             catch (Exception)

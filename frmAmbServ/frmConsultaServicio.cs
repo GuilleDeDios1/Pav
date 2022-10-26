@@ -37,8 +37,8 @@ namespace Proyecto_TPI
                 cmd.Parameters.Clear();
                 if (!string.IsNullOrEmpty(txtnombre.Text))
                 {
-                    cmd.Parameters.AddWithValue("@nombre",txtnombre.Text);
-                    consulta += " AND nombre like @nombre";
+                    //cmd.Parameters.AddWithValue("@nombre",txtnombre.Text);
+                    consulta += " AND nombre like '%" + txtnombre.Text + "%'";
                 }
                 if (!string.IsNullOrEmpty(txtdesc.Text))
                 {
