@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj": {}
+    "C:\\Users\\patricio\\Desktop\\pav\\Pav\\Proyecto_TPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj": {
+    "C:\\Users\\patricio\\Desktop\\pav\\Pav\\Proyecto_TPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj",
+        "projectUniqueName": "C:\\Users\\patricio\\Desktop\\pav\\Pav\\Proyecto_TPI.csproj",
         "projectName": "Proyecto_TPI",
-        "projectPath": "C:\\Users\\guill\\Desktop\\Pav\\Proyecto_TPI.csproj",
-        "packagesPath": "C:\\Users\\guill\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guill\\Desktop\\Pav\\obj\\",
+        "projectPath": "C:\\Users\\patricio\\Desktop\\pav\\Pav\\Proyecto_TPI.csproj",
+        "packagesPath": "C:\\Users\\patricio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\patricio\\Desktop\\pav\\Pav\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\ArchivoDePrograma\\vusual3\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\guill\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\patricio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -67,7 +67,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

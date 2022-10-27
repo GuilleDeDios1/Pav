@@ -32,14 +32,14 @@
             this.lblservicio = new System.Windows.Forms.Label();
             this.lbldesc_serv = new System.Windows.Forms.Label();
             this.lblmontodeservicio = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.txtMonto = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtidservicio = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.txtNombre = new System.Windows.Forms.MaskedTextBox();
-            this.txtDescripcion = new System.Windows.Forms.MaskedTextBox();
-            this.txtMonto = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,16 +70,37 @@
             this.lblmontodeservicio.TabIndex = 2;
             this.lblmontodeservicio.Text = "Monto de servicio";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(137, 60);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 23);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // txtDescripcion
+            // 
+            this.txtDescripcion.Location = new System.Drawing.Point(137, 94);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(100, 23);
+            this.txtDescripcion.TabIndex = 4;
+            // 
+            // txtMonto
+            // 
+            this.txtMonto.Location = new System.Drawing.Point(137, 123);
+            this.txtMonto.Name = "txtMonto";
+            this.txtMonto.Size = new System.Drawing.Size(100, 23);
+            this.txtMonto.TabIndex = 5;
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtMonto);
-            this.groupBox1.Controls.Add(this.txtDescripcion);
-            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Controls.Add(this.txtidservicio);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.lblservicio);
+            this.groupBox1.Controls.Add(this.txtMonto);
             this.groupBox1.Controls.Add(this.lbldesc_serv);
+            this.groupBox1.Controls.Add(this.txtDescripcion);
             this.groupBox1.Controls.Add(this.lblmontodeservicio);
+            this.groupBox1.Controls.Add(this.txtNombre);
             this.groupBox1.Location = new System.Drawing.Point(36, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(286, 163);
@@ -124,27 +145,6 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(137, 65);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
-            this.txtNombre.TabIndex = 8;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(137, 94);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(100, 23);
-            this.txtDescripcion.TabIndex = 9;
-            // 
-            // txtMonto
-            // 
-            this.txtMonto.Location = new System.Drawing.Point(137, 126);
-            this.txtMonto.Name = "txtMonto";
-            this.txtMonto.Size = new System.Drawing.Size(100, 23);
-            this.txtMonto.TabIndex = 10;
-            // 
             // frmEditarServicios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -168,13 +168,13 @@
         private Label lblservicio;
         private Label lbldesc_serv;
         private Label lblmontodeservicio;
+        private TextBox txtDescripcion;
+        private TextBox txtMonto;
         private GroupBox groupBox1;
         private Button btnAceptar;
         private Button btnCancelar;
+        internal TextBox txtNombre;
         internal TextBox txtidservicio;
         private Label label1;
-        private MaskedTextBox txtMonto;
-        private MaskedTextBox txtDescripcion;
-        private MaskedTextBox txtNombre;
     }
 }

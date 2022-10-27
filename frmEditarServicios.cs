@@ -1,6 +1,5 @@
 ﻿using Proyecto_TPI.Entidades;
 using System;
-using Proyecto_TPI.Validador;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,8 +21,7 @@ namespace Proyecto_TPI
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            bool van = validador.validar(Controls);
-            if (!van) { return; }
+            
             var serv = new Servicios();
             serv.Nombre_servicio = txtNombre.Text;
             serv.Descripcion_servivio = txtDescripcion.Text;

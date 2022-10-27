@@ -32,12 +32,12 @@
             this.lblnombre = new System.Windows.Forms.Label();
             this.lbldescripcion = new System.Windows.Forms.Label();
             this.lblcosto = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtDescrip = new System.Windows.Forms.TextBox();
+            this.txtcosto = new System.Windows.Forms.TextBox();
             this.btncancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtcosto = new System.Windows.Forms.MaskedTextBox();
-            this.txtDescrip = new System.Windows.Forms.MaskedTextBox();
-            this.txtNombre = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,27 @@
             this.lblcosto.TabIndex = 2;
             this.lblcosto.Text = "Costo";
             // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(74, 24);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(100, 23);
+            this.txtNombre.TabIndex = 3;
+            // 
+            // txtDescrip
+            // 
+            this.txtDescrip.Location = new System.Drawing.Point(74, 59);
+            this.txtDescrip.Name = "txtDescrip";
+            this.txtDescrip.Size = new System.Drawing.Size(100, 23);
+            this.txtDescrip.TabIndex = 4;
+            // 
+            // txtcosto
+            // 
+            this.txtcosto.Location = new System.Drawing.Point(74, 101);
+            this.txtcosto.Name = "txtcosto";
+            this.txtcosto.Size = new System.Drawing.Size(100, 23);
+            this.txtcosto.TabIndex = 5;
+            // 
             // btncancelar
             // 
             this.btncancelar.Location = new System.Drawing.Point(18, 202);
@@ -89,11 +110,11 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblnombre);
+            this.groupBox1.Controls.Add(this.txtNombre);
+            this.groupBox1.Controls.Add(this.lbldescripcion);
             this.groupBox1.Controls.Add(this.txtcosto);
             this.groupBox1.Controls.Add(this.txtDescrip);
-            this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.lblnombre);
-            this.groupBox1.Controls.Add(this.lbldescripcion);
             this.groupBox1.Controls.Add(this.lblcosto);
             this.groupBox1.Location = new System.Drawing.Point(12, 29);
             this.groupBox1.Name = "groupBox1";
@@ -101,28 +122,6 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "AltaServicio";
-            // 
-            // txtcosto
-            // 
-            this.txtcosto.Location = new System.Drawing.Point(74, 101);
-            this.txtcosto.Mask = "0000000000000000000000000";
-            this.txtcosto.Name = "txtcosto";
-            this.txtcosto.Size = new System.Drawing.Size(100, 23);
-            this.txtcosto.TabIndex = 8;
-            // 
-            // txtDescrip
-            // 
-            this.txtDescrip.Location = new System.Drawing.Point(74, 62);
-            this.txtDescrip.Name = "txtDescrip";
-            this.txtDescrip.Size = new System.Drawing.Size(100, 23);
-            this.txtDescrip.TabIndex = 7;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(74, 24);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(100, 23);
-            this.txtNombre.TabIndex = 6;
             // 
             // FrmAltaServicios
             // 
@@ -150,11 +149,11 @@
         private Label lblnombre;
         private Label lbldescripcion;
         private Label lblcosto;
+        private TextBox txtNombre;
+        private TextBox txtDescrip;
+        private TextBox txtcosto;
         private Button btncancelar;
         private Button btnAceptar;
         private GroupBox groupBox1;
-        private MaskedTextBox txtcosto;
-        private MaskedTextBox txtDescrip;
-        private MaskedTextBox txtNombre;
     }
 }

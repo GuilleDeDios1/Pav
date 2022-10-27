@@ -37,34 +37,33 @@ namespace Proyecto_TPI
                 cmd.Parameters.Clear();
                 if (!string.IsNullOrEmpty(txtnombre.Text))
                 {
-                    //cmd.Parameters.AddWithValue("@nombre",txtnombre.Text);
-                    consulta += " AND nombre like '%" + txtnombre.Text + "%'";
+                    cmd.Parameters.AddWithValue("@Nombre",txtnombre.Text);
+                    consulta += "AND nombre like '@Nombre%'";
                 }
                 if (!string.IsNullOrEmpty(txtdesc.Text))
                 {
                     cmd.Parameters.AddWithValue("@descripcion", txtdesc.Text);
-                    consulta += " AND descripcion like @descripcion";
+                    consulta += "AND descripcion like '@descripcion%'";
                 }
                 if (!string.IsNullOrEmpty(txtdesde.Text) && !string.IsNullOrEmpty(txthasta.Text))
                 {
                     cmd.Parameters.AddWithValue("@costo_desde", txtdesde.Text);
                     cmd.Parameters.AddWithValue("@costo_hasta", txthasta.Text);
-                    consulta += " AND (costo_mensual > @costo_desde AND costo_mensual < @costo_hasta)";
+                    consulta += "AND (costo_mensual > @costo_desde AND costo_mensual < @costo_hasta)";
                 }
                 if (checkActivo.Checked)
                 {
-                    consulta += " AND activo = 0";
+                    consulta += "AND activo = 0";
                 }
                 else 
                 {
-                    consulta += " AND activo = 1";
+                    consulta += "AND activo = 1";
                 }
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = consulta;
 
                 cn.Open();
                 cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
 
                 DataTable tabla = new DataTable();
 
