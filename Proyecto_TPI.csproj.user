@@ -34,26 +34,5 @@
     <Compile Update="baja_modificacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Proyecto_TPI\frmAltaCliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\frmAltaContrato.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\FrmAltaServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\frmConsultaServicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\frmEditarServicios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\frmMenuPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Proyecto_TPI\LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>
