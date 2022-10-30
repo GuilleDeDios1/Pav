@@ -120,3 +120,4 @@ C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\refint\Proyecto_TPI.dll
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.pdb
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.genruntimeconfig.cache
 C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\ref\Proyecto_TPI.dll
+C:\Users\guill\Desktop\Pav\obj\Debug\net6.0-windows\Proyecto_TPI.frmAltaContratoObtencionCliente.resources

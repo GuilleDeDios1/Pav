@@ -20,92 +20,11 @@ namespace Proyecto_TPI
         }
 
         private void frmAltaContrato_Load(object sender, EventArgs e)
-        {
-           //llena el datagridview
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                string consulta = "SELECT id,nombre_cliente,calle,nro_calle FROM Cliente";
-                cmd.Parameters.Clear();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta;
-
-                cn.Open();
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-
-                DataTable tabla = new DataTable();
-
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(tabla);
-                dgvClientes.DataSource = tabla;
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-            //lena el combo
-            DataTable tabla2 = buscar_servicios();
-            foreach(DataRow item in tabla2.Rows)
-            {
-                cboServ.Items.Add(item[0].ToString());
-            }
-
+        { 
+        
         }
 
-        private void dgvClientes_SelectionChanged(object sender, EventArgs e)
-        {
-            txtNumCliente.Text = dgvClientes.CurrentRow.Cells[0].Value.ToString();
-        }
 
-        private void btnAsignar_Click(object sender, EventArgs e)
-        {
-            if (txtNumTelefono.Text.Trim() == "")
-            {
-                MessageBox.Show("Se debe ingresar telefono");
-                return;
-            }
-            bool van1 = validador.validar_existencia_telefono(Convert.ToUInt32(txtNumTelefono.Text));
-            if (!van1)
-            {
-                MessageBox.Show("El numero de telefono ya existe");
-                return;
-            }
-
-            string cadenaConexion = System.Configuration.ConfigurationManager.AppSettings["CadenaBD"];
-            SqlConnection cn = new SqlConnection(cadenaConexion);
-            try
-            {
-                SqlCommand cmd = new SqlCommand();
-                string consulta1 = "INSERT INTO [dbo].[Telefonos]"
-                                    + "([nro_telefono]"
-                                    + ",[nro_cliente])"
-                                    + "VALUES"
-                                    + "(@numtell"
-                                    + ",@numcliente)";
-                cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@numtell", long.Parse(txtNumTelefono.Text));
-                cmd.Parameters.AddWithValue("@numcliente", Int32.Parse(dgvClientes.CurrentRow.Cells[0].Value.ToString()));
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = consulta1;
-                cn.Open();
-                cmd.Connection = cn;
-                cmd.ExecuteNonQuery();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                MessageBox.Show("Telefono asignado a cliente con exito");
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
-        }
 
         //boton asignar contrato
         private void btnasignarcontrato_Click(object sender, EventArgs e)
