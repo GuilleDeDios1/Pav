@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BXYJXhklBWe9GzWif+kxC+x4qlwBerO6Xm0CqZ4s/lt6HJjXK4Fvz9cwZQMyubWiZBgEWVLsYCNigfYGcO0HZg==",
+  "dgSpecHash": "5ezbKxz68kgSEYMOW160UlwN5iqhtNTxlh+/X2T5CxmhXouwy/5fVIyOvpiDKS33xxGuV20U4pNCtkX8Sjq9Wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\guill\\Desktop\\unir\\pav\\Proyecto_TPI.csproj",
+  "projectFilePath": "C:\\Users\\guill\\Desktop\\unir\\Nueva carpeta\\Pav\\Proyecto_TPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\guill\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\guill\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
